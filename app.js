@@ -5,7 +5,7 @@ let bodyParser = require('body-parser')
 let cookieParser = require('cookie-parser')
 let logger = require('morgan')
 
-let indexRouter = require('./routes/index')
+let indexRouter = require(path.resolve(__dirname, 'routes', 'index.js'))
 
 let app = express()
 

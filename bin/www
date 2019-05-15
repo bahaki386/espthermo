@@ -1,10 +1,11 @@
-// #!/usr/bin/env node
+#!/usr/bin/env node
 
 /**
  * Module dependencies.
  */
 
-let myapp = require('../app')
+let path = require('path')
+let app = require(path.resolve(__dirname, '..', 'app.js'))
 let debug = require('debug')('bookshelfkeeper-server:server')
 let http = require('http')
 
@@ -13,13 +14,13 @@ let http = require('http')
  */
 
 let port = normalizePort(process.env.PORT || '3000')
-myapp.set('port', port)
+app.set('port', port)
 
 /**
  * Create HTTP server.
  */
 
-let server = http.createServer(myapp)
+let server = http.createServer(app)
 
 /**
  * Listen on provided port, on all network interfaces.
