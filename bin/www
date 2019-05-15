@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-let app = require('../app')
+let myapp = require('../app')
 let debug = require('debug')('bookshelfkeeper-server:server')
 let http = require('http')
 
@@ -13,13 +13,13 @@ let http = require('http')
  */
 
 let port = normalizePort(process.env.PORT || '3000')
-app.set('port', port)
+myapp.set('port', port)
 
 /**
  * Create HTTP server.
  */
 
-let server = http.createServer(app)
+let server = http.createServer(myapp)
 
 /**
  * Listen on provided port, on all network interfaces.
