@@ -6,7 +6,7 @@
 
 let path = require('path')
 let app = require(path.resolve(__dirname, '..', 'app.js'))
-let debug = require('debug')('bookshelfkeeper-server:server')
+let debug = require('debug')('espthermo:server')
 let http = require('http')
 
 /**
